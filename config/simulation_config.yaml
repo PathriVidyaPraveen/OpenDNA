@@ -1,0 +1,28 @@
+# grid and discretization
+num_qubits: 5
+grid_points: 32
+
+# spatial boundaries to define the box the proton lives in
+x_min: -2.5
+x_max: 2.5
+
+# physics parameters
+mass: 1.0
+hbar: 1.0
+
+# potential energy surface
+potential_type: "asymmetric_double_well"
+
+# tuning mutation barrier
+potential_params:
+  a: 1.0        # steepness
+  b: 4.0        # well depth
+  asymmetry: 0.3 # healthy well has lower energy than mutation well
+
+# time evolution
+time_start: 0.0
+time_end: 5.0         # good for observing tunnelling
+num_time_steps: 60    
+
+# noise model - open quantum system
+noise_rate: 0.05       # 5% probability of dephasing per step
